@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página: fundo suave e fonte legível para sala de aula */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("Hamburgueria-decorada-em-clima-texano.-Na-revista-digital-sobre-decoracao-Conexao-Decor.-04-scaled.jpg");
+    background-size: 100%;
+    align-items: center;
+    background-repeat: no-repeat;
+    color: #b6b5b5;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Container centralizado com bordas arredondadas e sombra leve */
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    margin-top: 20vh;
+    background-color: #454444;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(136, 77, 0, 0.918);
+}
+
+h1 {
+    color: #dcd9d9;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+a{
+    color: #ff7a00;
+}
+.botao-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff7a00;
+    color: #ffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+
+}
+
+/* Subtítulo ou texto de boas-vindas */
+.subtitulo {
+    color: #eceaea;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* Grupos de campos do formulário com espaçamento consistente */
+.form-group {
+    margin-bottom: 18px;
+}
+
+/* Labels dos campos */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #cac4c4;
+
+}
+
+/* Campos de texto, email, senha e select */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #3c3c3d;
+    border-radius: 8px;
+    color: #eceaea;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: border-color 0.3s;
+    background-color: #3c3c3d;
+}
+
+/* Efeito ao clicar no campo */
+input:focus,
+select:focus {
+    outline: none;
+    border: 3px solid #ff7a00;
+
+}
+
+
+
+.btn:hover {
+    background-color: #ff7a00;
+    transform: translateY(-2px);
+}
