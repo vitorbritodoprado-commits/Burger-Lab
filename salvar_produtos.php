@@ -75,7 +75,7 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    header("Location: cardapio.php");
+    header("Location: cardapio_funcionario.php");
     exit;
 }
 

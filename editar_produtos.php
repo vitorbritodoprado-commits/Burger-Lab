@@ -57,7 +57,7 @@ if (!$produto) {
                 Pedir
             </button>
 
-            <a href="cardapio.php" class="voltar">
+            <a href="cardapio_funcionario.php" class="voltar">
                 Voltar ao cardápio
             </a>
 

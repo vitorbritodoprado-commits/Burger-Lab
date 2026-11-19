@@ -10,7 +10,6 @@ if (!$resultado) {
 
 $produtos = $resultado->fetch_all(MYSQLI_ASSOC);
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,9 +24,6 @@ $produtos = $resultado->fetch_all(MYSQLI_ASSOC);
 
     <header class="topo">
         <h1>Nosso Cardápio</h1>
-        <a href="adicionar_produtos.php" class="btn-adicionar">
-            + Adicionar produto
-        </a>
     </header>
 
     <main class="container">
@@ -44,7 +40,7 @@ $produtos = $resultado->fetch_all(MYSQLI_ASSOC);
                         <img src="uploads/<?= htmlspecialchars($produto['imagem']) ?>"
                             alt="<?= htmlspecialchars($produto['nome']) ?>">
                     <?php else: ?>
-                        <div class="sem-imagem">🍔</div>
+                        <div class="com-imagem"></div>
                     <?php endif; ?>
 
                     <div class="card-conteudo">

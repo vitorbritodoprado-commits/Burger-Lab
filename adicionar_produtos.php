@@ -12,7 +12,7 @@
 
     <div class="form-container">
 
-        <h1>Adicionar produto 🍔</h1>
+        <h1>Adicionar produto</h1>
 
         <form action="salvar_produtos.php" method="POST" enctype="multipart/form-data">
 

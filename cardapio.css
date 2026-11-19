@@ -59,14 +59,16 @@ body {
 }
 
 .card img {
+    display: block;
     width: 100%;
+    max-width: 100%;
     height: 240px;
     object-fit: contain;
     background: #5a2e1a;
     padding: 15px;
 }
 
-.sem-imagem {
+.com-imagem {
     height: 240px;
     display: flex;
     align-items: center;
