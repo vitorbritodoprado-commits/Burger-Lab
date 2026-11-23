@@ -1,5 +1,6 @@
 <?php
 require_once "conexao.php";
+require_once "imagem_produto.php";
 
 $sql = "SELECT * FROM produtos ORDER BY id DESC";
 $resultado = $conexao->query($sql);
@@ -36,9 +37,11 @@ $produtos = $resultado->fetch_all(MYSQLI_ASSOC);
 
                 <div class="card">
 
-                    <?php if (!empty($produto['imagem'])): ?>
-                        <img src="uploads/<?= htmlspecialchars($produto['imagem']) ?>"
-                            alt="<?= htmlspecialchars($produto['nome']) ?>">
+                    <?php $urlImagem = urlImagemProduto($produto['imagem'] ?? '', $produto['id']); ?>
+
+                    <?php if ($urlImagem): ?>
+                        <img class="produto-img" src="<?= htmlspecialchars($urlImagem) ?>"
+                            alt="<?= htmlspecialchars($produto['nome']) ?>" loading="lazy">
                     <?php else: ?>
                         <div class="com-imagem"></div>
                     <?php endif; ?>
@@ -60,17 +63,7 @@ $produtos = $resultado->fetch_all(MYSQLI_ASSOC);
                         </span>
 
                         <div class="acoes">
-
-                            <a href="editar_produtos.php?id=<?= $produto['id'] ?>" class="btn-editar">Pedir</a>
-
-
-
-                            <input type="hidden" name="id" value="<?= $produto['id'] ?>">
-
-
-
-                            </form>
-
+                            <a href="editar_produtos.php?id=<?= (int) $produto['id'] ?>" class="btn-editar">Pedir</a>
                         </div>
                     </div>
                 </div>
